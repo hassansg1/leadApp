@@ -21,9 +21,8 @@ class FormController extends Controller
     {
         $user = User::where('phone_no', $request->whatis2['0'])->first();
         if ($user) {
-            $user->delete();
-//            Session::flash('message', "A user is already registered with the given phone number...!!!");
-//            return Redirect::back();
+            Session::flash('message', "A user is already registered with the given phone number...!!!");
+            return Redirect::back();
         }
 
         $user = User::create([
@@ -88,7 +87,7 @@ class FormController extends Controller
         $lead->status = "Business Docs Needed";
         $lead->save();
 
-        $message = "Fantastic News {insert name}, 
+        $message = "Fantastic News ".$user->name.", 
 
         You qualify for a business loan! Now we need to verify your information. Upload your documents here: www.rainfallfunds.com/personal/form. 
         What we need:
@@ -158,7 +157,7 @@ class FormController extends Controller
         $lead->save();
 
 
-        $message = "Great job {insert name}! 
+        $message = "Great job ".$user->name.", 
 
 We have your business documents. Look out for your closing loan documents. They should arrive in 24-48 hours. If we need anything else, I will reach out to you directly.
 

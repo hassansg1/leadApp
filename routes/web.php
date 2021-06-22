@@ -26,6 +26,9 @@ Route::get('/business/form', function () {
 Route::get('/personal/form', function () {
     return view('third_form');
 });
+Route::get('/Test', function () {
+    \Illuminate\Support\Facades\Artisan::call('command:scheduleSMS');
+});
 
 Route::post('submitFormOne','FormController@store')->name('submitFormOne');
 Route::post('submitFormTwo','FormController@storeFormTwo')->name('submitFormTwo');
