@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+$archivo:'Archivo',
+sans-serif;
+$lato:'Lato',
+sans-serif;
+
+body {
+    font-family: $lato;
+    background: #fff;
+    color: #1F3845;
+
+    .button {
+        background: #112F48;
+        text-decoration: none;
+        color: #fff;
+        font-family: $archivo;
+        padding: 1rem 1.5rem;
+        display: inline-block;
+        font-size: 2rem;
+        border-radius: 2.5rem;
+
+        &:hover {
+            background: #112f48d0;
+        }
+    }
+
+    H1,
+    H2,
+    H3 {
+        font-family: $archivo;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1300px;
+        padding: 0 2rem;
+        margin: 0 auto;
+    }
+
+    header {
+        padding: 0 0;
+        width: 100%;
+        padding-bottom: 0;
+
+        h4 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #112F48;
+            background: #DCF5FC;
+            text-align: center;
+            width: 100%;
+            padding: .5rem 0;
+            margin-top: .5rem;
+
+            span {
+                color: #112F48;
+                font-weight: 600
+            }
+            &.topr{
+                margin-bottom: .5rem;
+                background: #112F48;
+                color: #fff;
+                margin-top: 0;
+            }
+        }
+       
+
+        .hdrInnr {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .contactBtn{
+                text-decoration: none;
+                background: #DCF5FC;
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                padding: .9rem 1.7rem;
+                cursor: pointer;
+                border-radius: .4rem;
+                &:hover{
+                    background: #112F48;
+                    color: #fff;
+               
+                }
+            }
+            .logo {
+                width: 6rem;
+                display: block;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #hero {
+        background: url('../img/bghdr.png');
+        background-size: cover;
+        background-position: right bottom;
+
+        .heroWraper {
+            min-height: 80rem;
+            flex-wrap: wrap;
+            display: flex;
+            align-items: center;
+
+            .lft {
+                width: 50%;
+                padding-right: 5rem;
+
+                h1 {
+                    font-size: 3.5rem;
+
+                }
+
+                h2 {
+                    font-size: 4rem;
+                    text-transform: uppercase;
+                    margin-top: .5rem;
+                }
+
+                h3 {
+                    font-size: 2.5rem;
+                    color: #4b4b4b;
+                    margin-top: 3rem;
+                }
+
+                p {
+                    font-size: 2rem;
+                    margin-top: 2.5rem;
+                }
+
+                .button {
+                    margin-top: 2rem;
+                }
+            }
+
+            .rght {
+                width: 50%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+
+    #form {
+        padding: 4rem 0;
+        background: url('../img/bgform.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top left;
+    }
+
+    #cvts {
+        background: url('../img/srvcbg.png');
+        padding: 8rem 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top left;
+        background-color: #F7FBFD;
+
+
+        .cvts {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .lft {
+                width: 50%;
+                padding-right: 5rem;
+
+                h2 {
+                    font-size: 4rem;
+                }
+
+                p {
+                    font-size: 2rem;
+                    margin-top: 2.5rem;
+                    line-height: 1.5
+                }
+
+                .button {
+                    margin-top: 3rem;
+                }
+            }
+
+            .rght {
+                width: 50%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .titel {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    #service {
+        padding: 8rem 0;
+        background: url('../img/bg-frm-btm.png');
+        background-size: cover;
+        background-position: bottom right;
+    }
+
+    #service {
+        .srvceWrapper {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .srvcdiv {
+                margin-top: 2rem;
+                text-align: center;
+                box-shadow: 1px 1px 10px #ddd;
+                width: 32%;
+                background: #fff;
+                padding: 3rem 2rem;
+                border-radius: 1.5rem;
+
+                h3 {
+                    margin-top: 1.2rem;
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    margin-top: 1rem;
+
+                }
+
+                .icon {
+                    width: 6rem;
+                    padding: 1rem;
+                    border: .3rem solid #4BA6BB;
+                    border-radius: 50%;
+                    margin: 0 auto;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottomBtn {
+        margin-top: 5rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:576px) {
+    html {
+        font-size: 50%;
+    }
+
+    body #hero .heroWraper .lft {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    body #hero .heroWraper .rght {
+        width: 100%;
+    } 
+
+    body #cvts .cvts .lft {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    body #cvts .cvts .rght {
+        width: 100%;
+        margin-top: 2rem;
+        padding: 0;
+    }
+    body #service .srvceWrapper .srvcdiv{
+        width: 100%;
+    }
+}

@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: #fff;
+  color: #1F3845;
+}
+
+body .button {
+  background: #112F48;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Archivo", sans-serif;
+  padding: 1rem 1.5rem;
+  display: inline-block;
+  font-size: 2rem;
+  border-radius: 2.5rem;
+}
+
+body .button:hover {
+  background: #112f48d0;
+}
+
+body H1,
+body H2,
+body H3 {
+  font-family: "Archivo", sans-serif;
+}
+
+body .container {
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+body header {
+  padding: 0 0;
+  width: 100%;
+  padding-bottom: 0;
+}
+
+body header h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #112F48;
+  background: #DCF5FC;
+  text-align: center;
+  width: 100%;
+  padding: .5rem 0;
+  margin-top: .5rem;
+}
+
+body header h4 span {
+  color: #112F48;
+  font-weight: 600;
+}
+
+body header h4.topr {
+  margin-bottom: .5rem;
+  background: #112F48;
+  color: #fff;
+  margin-top: 0;
+}
+
+body header .hdrInnr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body header .hdrInnr .contactBtn {
+  text-decoration: none;
+  background: #DCF5FC;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: .9rem 1.7rem;
+  cursor: pointer;
+  border-radius: .4rem;
+}
+
+body header .hdrInnr .contactBtn:hover {
+  background: #112F48;
+  color: #fff;
+}
+
+body header .hdrInnr .logo {
+  width: 6rem;
+  display: block;
+}
+
+body header .hdrInnr .logo img {
+  width: 100%;
+}
+
+body #hero {
+  background: url("../img/bghdr.png");
+  background-size: cover;
+  background-position: right bottom;
+}
+
+body #hero .heroWraper {
+  min-height: 80rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #hero .heroWraper .lft {
+  width: 50%;
+  padding-right: 5rem;
+}
+
+body #hero .heroWraper .lft h1 {
+  font-size: 3.5rem;
+}
+
+body #hero .heroWraper .lft h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-top: .5rem;
+}
+
+body #hero .heroWraper .lft h3 {
+  font-size: 2.5rem;
+  color: #4b4b4b;
+  margin-top: 3rem;
+}
+
+body #hero .heroWraper .lft p {
+  font-size: 2rem;
+  margin-top: 2.5rem;
+}
+
+body #hero .heroWraper .lft .button {
+  margin-top: 2rem;
+}
+
+body #hero .heroWraper .rght {
+  width: 50%;
+}
+
+body #hero .heroWraper .rght img {
+  width: 100%;
+}
+
+body #form {
+  padding: 4rem 0;
+  background: url("../img/bgform.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+}
+
+body #cvts {
+  background: url("../img/srvcbg.png");
+  padding: 8rem 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+  background-color: #F7FBFD;
+}
+
+body #cvts .cvts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body #cvts .cvts .lft {
+  width: 50%;
+  padding-right: 5rem;
+}
+
+body #cvts .cvts .lft h2 {
+  font-size: 4rem;
+}
+
+body #cvts .cvts .lft p {
+  font-size: 2rem;
+  margin-top: 2.5rem;
+  line-height: 1.5;
+}
+
+body #cvts .cvts .lft .button {
+  margin-top: 3rem;
+}
+
+body #cvts .cvts .rght {
+  width: 50%;
+}
+
+body #cvts .cvts .rght img {
+  width: 100%;
+}
+
+body .titel {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+body #service {
+  padding: 8rem 0;
+  background: url("../img/bg-frm-btm.png");
+  background-size: cover;
+  background-position: bottom right;
+}
+
+body #service .srvceWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body #service .srvceWrapper .srvcdiv {
+  margin-top: 2rem;
+  text-align: center;
+  -webkit-box-shadow: 1px 1px 10px #ddd;
+          box-shadow: 1px 1px 10px #ddd;
+  width: 32%;
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
+}
+
+body #service .srvceWrapper .srvcdiv h3 {
+  margin-top: 1.2rem;
+  font-size: 2rem;
+}
+
+body #service .srvceWrapper .srvcdiv p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+body #service .srvceWrapper .srvcdiv .icon {
+  width: 6rem;
+  padding: 1rem;
+  border: .3rem solid #4BA6BB;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+body #service .srvceWrapper .srvcdiv .icon img {
+  width: 100%;
+}
+
+body .bottomBtn {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 50%;
+  }
+  body #hero .heroWraper .lft {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  body #hero .heroWraper .rght {
+    width: 100%;
+  }
+  body #cvts .cvts .lft {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  body #cvts .cvts .rght {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0;
+  }
+  body #service .srvceWrapper .srvcdiv {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
