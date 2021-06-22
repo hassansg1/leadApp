@@ -20,10 +20,10 @@ Route::get('/', function () {
 Route::get('/form', function () {
     return view('welcome');
 });
-Route::get('/form/business_info', function () {
+Route::get('/business/form', function () {
     return view('second_form');
 });
-Route::get('/form/business_docs_info', function () {
+Route::get('/personal/form', function () {
     return view('third_form');
 });
 

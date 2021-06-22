@@ -10,5 +10,4 @@ class Lead extends Model
 
     protected $guarded = null;
 
-    public $timestamps = [];
 }

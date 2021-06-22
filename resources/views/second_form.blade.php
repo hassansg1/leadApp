@@ -249,6 +249,7 @@
     <div class="jfWelcome-wrapper" role="banner">
         <div class="jfWelcome">
             <div id="header_welcomePage" class="jfWelcome-header form-header" data-component="header" style="opacity:1">
+                @include('error')
                 Loans are going fast!
             </div>
             <div id="subHeader_welcomePage" class="jfWelcome-description form-subHeader">Answer a few questions, so you
