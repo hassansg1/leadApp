@@ -21,8 +21,9 @@ class FormController extends Controller
     {
         $user = User::where('phone_no', $request->whatis2['0'])->first();
         if ($user) {
-            Session::flash('message', "A user is already registered with the given phone number...!!!");
-            return Redirect::back();
+            $user->delete();
+//            Session::flash('message', "A user is already registered with the given phone number...!!!");
+//            return Redirect::back();
         }
 
         $user = User::create([
