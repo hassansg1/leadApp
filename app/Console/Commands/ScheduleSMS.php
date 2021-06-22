@@ -53,7 +53,7 @@ class ScheduleSMS extends Command
                 $minutes = $since_start->days * 24 * 60;
                 $minutes += $since_start->h * 60;
                 $minutes += $since_start->i;
-                if ($minutes < 350 && $minutes > 297)
+                if ($minutes == 300)
                 {
                     $message = "";
                     if ($lead->status == "Business Information")
