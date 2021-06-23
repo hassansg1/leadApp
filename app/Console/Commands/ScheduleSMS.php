@@ -40,7 +40,6 @@ class ScheduleSMS extends Command
      */
     public function handle()
     {
-        User::create(['email' => 'sss']);
         $leads = Lead::where('status','!=','Business Docs Received')->orWhere('status',null)->get();
 
         foreach ($leads as $lead)
