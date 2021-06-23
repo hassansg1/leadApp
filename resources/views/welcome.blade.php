@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Best Business Solution</title>
     <link rel="stylesheet" href="{{ asset('styles/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon-16x16.png') }}" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon-32x32.png') }}" sizes="32x32">
+    <link rel="apple-touch-icon"  href="{{ asset('img/apple-touch-icon.png') }}">
 </head>
 
 <body>
@@ -21,7 +24,7 @@
             <a href="/" class="logo">
                 <img src="{{ asset('img/RainFall-Logo.png') }}" alt="img">
             </a>
-            <a class="contactBtn" href="#">
+            <a class="contactBtn"  href="tel:949-204-0303">
                 contct us
             </a>
         </div>
