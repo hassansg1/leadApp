@@ -48,13 +48,13 @@ class ScheduleSMS extends Command
             {
                 $user = User::find($lead->user_id);
                 $now = new DateTime(now());
-                $since_start = $now->diff(new DateTime($lead->created_at));
+                $since_start = $now->diff(new DateTime($lead->updated_at));
                 $minutes = $since_start->days * 24 * 60;
                 $minutes += $since_start->h * 60;
+                $message = "";
                 $minutes += $since_start->i;
                 if ($minutes == 300)
                 {
-                    $message = "";
                     if ($lead->status == "Business Information")
                     {
                         $message = "Hey  ".$user->name.",
@@ -76,17 +76,44 @@ Upload them today at this link: www.rainfallfunds.com/personal/form.
 									Darren	";
                     }
 
-                    if($message != "")
+
+                }
+                if ($minutes == 90)
+                {
+                    if ($lead->status == "Business Docs Needed(Pending)")
                     {
-                        try{
-                            Twilio::message(
-                                '+1 '.$user->phone_no,
-                                $message
-                            );
-                        }
-                        catch (\Exception $ex)
-                        {
-                        }
+                        $message = "Fantastic News ".$user->name.", 
+
+        You qualify for a business loan! Now we need to verify your information. Upload your documents here: www.rainfallfunds.com/personal/form. 
+        What we need:
+            -Front and back of driver’s license. 
+            -3 months business bank statements for 2021. (March, April, May)
+        
+        Next steps after receiving your documents:  
+             1. We finalize your information. (generally takes 24-48 hours) 
+             2. You receive your loan documents to sign.
+             3. You sign the loan documents. 
+              4. You get funded. (normally in 24 hours)
+                                              Let's get you funded,
+                                                           Darren";
+                        $lead->status = "Business Docs Needed";
+
+                        $lead->save();
+                    }
+
+
+                }
+
+                if($message != "")
+                {
+                    try{
+                        Twilio::message(
+                            '+1 '.$user->phone_no,
+                            $message
+                        );
+                    }
+                    catch (\Exception $ex)
+                    {
                     }
                 }
             }

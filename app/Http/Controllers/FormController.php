@@ -84,29 +84,9 @@ class FormController extends Controller
             'revenue' => $request->q20_in2021,
         ]);
 
-        $lead->status = "Business Docs Needed";
+        $lead->status = "Business Docs Needed(Pending)";
         $lead->save();
 
-        $message = "Fantastic News ".$user->name.", 
-
-        You qualify for a business loan! Now we need to verify your information. Upload your documents here: www.rainfallfunds.com/personal/form. 
-        What we need:
-            -Front and back of driver’s license. 
-            -3 months business bank statements for 2021. (March, April, May)
-        
-        Next steps after receiving your documents:  
-             1. We finalize your information. (generally takes 24-48 hours) 
-             2. You receive your loan documents to sign.
-             3. You sign the loan documents. 
-              4. You get funded. (normally in 24 hours)
-                                              Let's get you funded,
-                                                           Darren";
-
-
-        Twilio::message(
-            '+1 ' . $user->phone_no,
-            $message
-        );
 
         return view('success');
         //
